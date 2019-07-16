@@ -7,9 +7,9 @@ sudo apt-get install build-essential
 sudo apt-get install dh-autoreconf
 sudo apt-get install autoconf2.64
 
-2. Распаковать архив build.tar.gz и перейти в директорию build.
-tar xf build.tar.gz -C /tmp/
-cd /tmp/build
+2. Склонировать
+git clone git@github.com:ibragimkb/addrfromwif.git
+
 
 3. Выполнить файл build.sh. 
 ./build.sh
@@ -17,4 +17,4 @@ cd /tmp/build
 4. Если ошибок в процессе не возникло, то в текущей директории появятся директория bin
 В директории bin будет находиться файл
 
-5. Скопировать файл
+5. Скопировать файл - addrFromWif
