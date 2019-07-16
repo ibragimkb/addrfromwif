@@ -1,0 +1,20 @@
+Сборка
+
+(support currency - btc, dsh, ltc, zec)
+
+1. Установить окружение для сборки:
+sudo apt-get install build-essential
+sudo apt-get install dh-autoreconf
+sudo apt-get install autoconf2.64
+
+2. Распаковать архив build.tar.gz и перейти в директорию build.
+tar xf build.tar.gz -C /tmp/
+cd /tmp/build
+
+3. Выполнить файл build.sh. 
+./build.sh
+
+4. Если ошибок в процессе не возникло, то в текущей директории появятся директория bin
+В директории bin будет находиться файл
+
+5. Скопировать файл
