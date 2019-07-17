@@ -15,8 +15,19 @@ else
     mkdir -p $BINDIR
 fi
 
-cd $SRCDIR
-git clone https://github.com/libbtc/libbtc.git
+
+if [ -d $LIBBTC ] ; then
+    cd $LIBBTC
+    git fetch
+    git merge
+    make clean
+else
+    cd $SRCDIR
+    git clone https://github.com/libbtc/libbtc.git
+fi
+
+
+
 cd $LIBBTC
 ./autogen.sh
 ./configure --disable-shared --enable-static --disable-net --disable-wallet --disable-tools CFLAGS="$CFLAGS -fPIC"
