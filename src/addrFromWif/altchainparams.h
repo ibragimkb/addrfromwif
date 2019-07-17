@@ -30,6 +30,7 @@ typedef struct zec_chainparams_ {
 } zec_chainparams;
 
 extern const char *CURRENCY;
+extern const btc_chainparams btc_chainparams_main_ypub;
 extern const btc_chainparams dash_chainparams_xpub;
 extern const btc_chainparams dash_chainparams_drkp;
 extern const btc_chainparams ltc_chainparams_mtub;

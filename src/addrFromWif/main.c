@@ -254,9 +254,11 @@ void usage(const char *app)
     printf("\t-w - wif\n");
     printf("\t-t - address type: (pkh, wpkh)\n");
     printf("Example:\n%s -t btc\n", app);
-    printf("%s -c btc -w L3ax2Kicb8KWuEKSEhaUixLzaz4Fy5YTvcPecGc6z7Y2WwvJvm12\n\n", app);
-    printf("%s -c btc -t wpkh -w L3ax2Kicb8KWuEKSEhaUixLzaz4Fy5YTvcPecGc6z7Y2WwvJvm12\n\n", app);
-	printf("Gen address without wif (new wif auto generated)\n%s -c btc -t wpkh\n\n", app);
+    printf("%s -c btc -w L3ax2Kicb8KWuEKSEhaUixLzaz4Fy5YTvcPecGc6z7Y2WwvJvm12\n", app);
+    printf("%s -c btc -t wpkh -w L3ax2Kicb8KWuEKSEhaUixLzaz4Fy5YTvcPecGc6z7Y2WwvJvm12\n", app);
+    printf("Generate address without wif (new wif generated automatically):\n");
+    printf("%s -c btc -t wpkh\n", app);
+    printf("%s -c btc\n\n", app);
 }
 
 int main(int argc, char **argv)
@@ -336,7 +338,7 @@ int main(int argc, char **argv)
                         printf("[E] gen wif fail; %s\n", err_buffer);
                         return 0;
                     }
-					printf("\n!!! wif undefined\n\tGenerate new wif: %s\n", wif);
+                    printf("\n\t!!! wif undefined\n\tGenerate new wif: %s\n", wif);
                 }
                 if (!getPubAddressFromWIF(id,  wif, addr, addr_sz, err_buffer, err_sz)) {
                     printf("[E] %s\n", err_buffer);
@@ -355,5 +357,6 @@ int main(int argc, char **argv)
             usage(argv[0]);
         break;
     }
+    printf("\n");
     return 0;
 }

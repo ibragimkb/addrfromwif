@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS =  -fPIC -std=gnu99 -pedantic -W -Wall -Wno-missing-braces
 
-LIB_PATH = ../libbtc-master
+LIB_PATH = ../libbtc
 
 
 # build C lib
