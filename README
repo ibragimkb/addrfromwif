@@ -8,7 +8,7 @@ sudo apt-get install dh-autoreconf
 sudo apt-get install autoconf2.64
 
 2. Склонировать
-git clone git@github.com:ibragimkb/addrfromwif.git
+git clone https://github.com/ibragimkb/addrfromwif.git
 
 
 3. Выполнить файл build.sh. 
